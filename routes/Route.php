@@ -16,7 +16,7 @@ class Route
             case '/':
                 $this->controller->index();
                 break;
-            case '/article?id=' . isset($_GET['id']):
+            case '/article?id=' . $_GET['id']:
                 $this->controller->article($_GET['id']);
                 break;
             default:

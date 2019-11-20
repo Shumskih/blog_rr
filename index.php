@@ -4,3 +4,5 @@ require_once ROOT . '/routes/Route.php';
 
 $route = new Route();
 $route->run();
+
+exit;

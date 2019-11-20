@@ -1,6 +1,7 @@
 <?php
 require_once ROOT . '/controller/Controller.php';
 require_once ROOT . '/service/ArticleService.php';
+require_once ROOT . '/routes/Route.php';
 
 class ArticleController extends Controller
 {
@@ -23,6 +24,13 @@ class ArticleController extends Controller
     {
         $article = $this->service->getById($id);
 
-        include ROOT . '/view/article.html.php';
+        if (!$article->getId()) {
+           $this->error(404);
+        }
+        if ($article->getId()) {
+            $title = $article->getTitle();
+
+            include ROOT . '/view/article.html.php';
+        }
     }
 }
