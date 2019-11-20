@@ -1,3 +1,5 @@
+<?php require_once ROOT . '/view/includes/head.html.php'?>
+
 <h1>Articles</h1>
 
 <?php if (isset($articles)): ?>
@@ -11,3 +13,5 @@
         </ul>
     <?php endforeach; ?>
 <?php endif; ?>
+
+<?php require_once ROOT . '/view/includes/footer.html.php' ?>

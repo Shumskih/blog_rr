@@ -13,8 +13,16 @@ class ArticleController extends Controller
 
     public function index()
     {
+        $title = 'All articles';
         $articles = $this->service->getAll();
 
         include ROOT . '/view/index.html.php';
+    }
+
+    public function article($id)
+    {
+        $article = $this->service->getById($id);
+
+        include ROOT . '/view/article.html.php';
     }
 }
