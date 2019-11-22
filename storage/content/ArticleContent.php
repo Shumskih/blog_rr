@@ -3,7 +3,7 @@
 
 class ArticleContent
 {
-    const ARTICLES = [
+    const ARTICLE = [
         [
             'id' => 1,
             'title' => 'Article title 1',

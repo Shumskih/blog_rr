@@ -1,6 +1,6 @@
 <?php
 require_once ROOT . '/controller/Controller.php';
-require_once ROOT . '/service/ArticleService.php';
+require_once ROOT . '/service/ArticleArrayService.php';
 require_once ROOT . '/routes/Route.php';
 
 class ArticleController extends Controller
@@ -9,7 +9,7 @@ class ArticleController extends Controller
 
     public function __construct()
     {
-        $this->service = new ArticleService();
+        $this->service = new ArticleArrayService();
     }
 
     public function index()
