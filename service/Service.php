@@ -3,7 +3,7 @@
 
 abstract class Service
 {
-    abstract function getAll(): array;
+    abstract function getAll();
 
     abstract function getById($id): Article;
 }

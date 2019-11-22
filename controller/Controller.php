@@ -12,6 +12,8 @@ class Controller
                 include ROOT . '/view/errors/404.html.php';
                 break;
             default:
+                $title = 'Error';
+
                 include ROOT . '/view/errors/default.html.php';
                 break;
         }

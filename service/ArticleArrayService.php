@@ -18,7 +18,7 @@ class ArticleArrayService extends Service
             if ($a['id'] == $id) {
                 $article->setId($a['id']);
                 $article->setTitle($a['title']);
-                $article->setDate($a['date']);
+                $article->setDate(date("d.m.Y", $a['date']));
                 $article->setPreview($a['preview']);
                 $article->setText($a['text']);
             }
